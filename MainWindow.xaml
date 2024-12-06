@@ -1,0 +1,36 @@
+﻿<Window x:Class="RecourcesTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RecourcesTest"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="800">
+    <Grid Background="#1e1e1e">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Label с текстом CKL Studio -->
+        <Label Style="{StaticResource Header}" Content="CKL Studio" Margin="60, 20, 0, 60" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Style="{StaticResource h1}" Content="Открыть последние:" Margin="60, 0, 0, 0"/>
+
+        <!-- StackPanel для кнопок -->
+        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,43,0,0">
+            <Button Style="{StaticResource btTemplate}" Content="Сохранить"/>
+            <Button Style="{StaticResource btTemplate}" Content="Открыть"/>
+            <Button Style="{StaticResource btTemplate}" Content="Открыть локальную папку"/>
+        </StackPanel>
+
+        <!-- StackPanel для Label, ComboBox и ListBox -->
+        <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="53,0,0,0" Width="400">
+            <ComboBox Width="350" Margin="10,10,0,0" HorizontalAlignment="Left"/>
+            <ListBox Width="400" Height="330" Margin="10,10,0,0" HorizontalAlignment="Right" Background="#FF2C2C2C" BorderThickness="0"/>
+        </StackPanel>
+    </Grid>
+</Window>
